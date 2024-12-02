@@ -22,7 +22,8 @@ public class CarServiceImpl implements CarService {
     public List<Car> getCars(Integer count){
         if (count == null || count >= cars.size()) {
             return cars;
+        } else {
+            return cars.subList(0, count);
         }
-        return cars.subList(0, count);
     }
 }
