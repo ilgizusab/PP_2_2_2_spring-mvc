@@ -10,7 +10,7 @@ import java.util.List;
 public class CarServiceImpl implements CarService {
     private final List<Car> cars = new ArrayList<>();
 
-    public CarServiceImpl(){
+    public CarServiceImpl() {
         cars.add(new Car("Camry", "Toyota", 2015));
         cars.add(new Car("Civic", "Honda", 2010));
         cars.add(new Car("Mustang", "Ford", 1965));
@@ -19,7 +19,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public List<Car> getCars(Integer count){
+    public List<Car> getCars(Integer count) {
         if (count == null || count >= cars.size()) {
             return cars;
         } else {
